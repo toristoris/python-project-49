@@ -3,7 +3,7 @@ import prompt  # библиотека для ввода/вывода
 from typing import Callable
 
 
-def even_game(
+def game_engine(
     rules: str, max_tries: int, func_question: Callable, check_answer: Callable
 ):
     name = welcome_user()
