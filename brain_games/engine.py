@@ -4,7 +4,7 @@ from typing import Callable
 
 
 def game_engine(
-    rules: str, max_tries: int, func_question: Callable, check_answer: Callable
+    rules: str, max_tries: int, func_question: Callable
 ):
     name = welcome_user()
     print(rules)
