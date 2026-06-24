@@ -11,13 +11,11 @@ def game_engine(
     count_tries = 0
 
     while count_tries < max_tries:
-        number = func_question()
-        correct_answer = "yes" if number % 2 == 0 else "no"
-        print(f"Question: {number}")
+        question, correct_answer = func_question()
+        print(f"Question: {question}")
         user_answer = prompt.string("Your answer: ").lower().strip()
-        check = check_answer(user_answer, correct_answer)
-
-        if check:
+        
+        if user_answer == str(correct_answer):  # проверка прямо здесь
             print("Correct!")
             count_tries += 1
         else:
