@@ -1,6 +1,4 @@
-import prompt
 import random
-from brain_games.cli import welcome_user  # импортируем приветствие
 
 MAX_TRIES = 3
 
@@ -14,5 +12,7 @@ def check_answer(user_answer: str, correct_answer: str) -> bool:
 
 
 def get_question():
-    question = random.randint(1, 100)
-    return question
+    number = random.randint(1, 100)
+    question = number
+    correct_answer = "yes" if number % 2 == 0 else "no"
+    return question, correct_answer
