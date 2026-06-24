@@ -1,4 +1,5 @@
 import random
+import math
 
 MAX_TRIES = 3
 
